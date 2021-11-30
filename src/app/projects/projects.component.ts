@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User} from '../user';
+import { SearchService } from '../services/search/search.service';
+
 
 
 @Component({
@@ -9,21 +10,20 @@ import { User} from '../user';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  
+  username: string = 'daneden'
 
-  user:User 
+  repositories: any[] = [];
 
- 
-
-  constructor(private http:HttpClient) { }
-
-  ngOnInit() {
-    interface ApiResponse{
-      name:string;
-      
-    }
-    this.http.get<ApiResponse>('https://api.github.com/users/daneden').subscribe(data=>{
-      this.user = new User(data.name)
+  constructor(private searchService: SearchService, private http:HttpClient) { }
+  getPublicRepositories(){
+    this.searchService.getUsers(this.username).subscribe((response:any)=> {
+      //console.log(response)
+      this.repositories = response;
     })
+  }
+  ngOnInit() {
+    this.getPublicRepositories();
   }
 
 }

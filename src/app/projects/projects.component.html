@@ -9,4 +9,9 @@
   </form>
   <hr>
 
-  <p>{{user.name}}</p><br>
+  <div class="container">
+    <ul *ngFor= "let repo of repositories">
+      <li> Name: {{repo.name}}</li>
+      <li> Description:{{repo.description}}</li>
+    </ul>
+  </div>
