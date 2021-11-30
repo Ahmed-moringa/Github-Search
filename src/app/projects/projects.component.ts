@@ -17,13 +17,16 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private searchService: SearchService, private http:HttpClient) { }
   getPublicRepositories(){
-    this.searchService.getUsers(this.username).subscribe((response:any)=> {
-      //console.log(response)
+    this.searchService.getUsers(this.username).then((response)=> {
       this.repositories = response;
+    }).catch((error)=>{
+      console.log(error.status);
+    }).finally(()=> {
+      console.log('finally')
     })
   }
+
   ngOnInit() {
-    this.getPublicRepositories();
   }
 
 }

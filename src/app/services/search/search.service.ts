@@ -11,11 +11,8 @@ export class SearchService {
   
   constructor(private httpClient: HttpClient) { }
   
-  getUsers(username: string):Observable<any[]> {
-    
-
+  getUsers(username: string){
     return this.httpClient.get<any[]>(`${this.baseUrl}/users/${username}/repos`, {
-
-    });
+    }).toPromise()
   }
 }
