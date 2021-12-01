@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
     }).catch((error)=>{
       console.log(error.status);
     }).finally(()=> {
-      console.log('finally')
+
     })
   }
 
