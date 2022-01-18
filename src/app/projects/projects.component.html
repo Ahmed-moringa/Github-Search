@@ -1,6 +1,6 @@
 <form>
     <div class="mb-3">
-      <label for="userName" class="form-label">User Name</label>
+      <label for="userName" class="form-label">User</label>
       <input type="text" class="form-control" id="userName" >
     </div>
     
@@ -8,9 +8,9 @@
   </form>
   <hr>
 
-  <div class="container">
-    <ul *ngFor= "let repo of repositories">
-      <li> Name: {{repo.name}}</li>
-      <li> Description:{{repo.description}}</li>
+  <div class="card" style="width: 18rem;" *ngFor= "let repo of repositories">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{repo.name}}</li>
+      <li class="list-group-item">{{repo.description}}</li>
     </ul>
   </div>
