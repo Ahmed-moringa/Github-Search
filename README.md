@@ -5,8 +5,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Live Page 
 https://ahmed-moringa.github.io/Github-Search/
 
-## Development server
-
 ## Description
 
 This is Angular CLI application that allows a user to enter a GitHub username into a form and look for repositories based on github user name.
