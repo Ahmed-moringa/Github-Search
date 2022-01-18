@@ -2,9 +2,39 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
+## Live Page 
+
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+
+This is Angular CLI application that allows a user to enter a GitHub username into a form and look for repositories based on github user name.
+
+
+## Installation / Setup instruction
+* Open Terminal {Ctrl+Alt+T}
+
+* git clone ```https://github.com/Ahmed-moringa/Githhub-Search.git```
+
+* cd Github-Search
+
+* code . or atom . based on the text editor you have.
+
+* Run ng serve for a dev server. 
+
+* Navigate to http://localhost:4200/. 
+
+* `npm install && ng serve`
+
+## Technology used ##
+
+* Angular CLI
+* HTML 
+* CSS
+* Bootstrap 
+* Typescript
+* Generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Code scaffolding
 
@@ -25,3 +55,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Known Bugs
+* Cant properly display the correct repo
+
+## License
+* *MIT License:*
+* Copyright (c) 2021 **Ahmed Mohamed**
